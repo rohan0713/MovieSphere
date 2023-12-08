@@ -3,6 +3,7 @@ package com.clone.moviesphere.ui.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.clone.moviesphere.ui.fragments.AllShowFragment
 import com.clone.moviesphere.ui.fragments.MoviesFragment
 
 class PageAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
@@ -12,7 +13,7 @@ class PageAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fra
 
     override fun createFragment(position: Int): Fragment {
         return when(position){
-            0 -> MoviesFragment()
+            0 -> AllShowFragment()
             1 -> MoviesFragment()
             2 -> MoviesFragment()
             3 -> MoviesFragment()

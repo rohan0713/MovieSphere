@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.activities.DetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/movie3"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/ic_corners">
+
+                        <ImageView
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_play"
+                            app:tint="@color/base" />
+
+                        <TextView
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:text="Trailer"
+                            android:textColor="@color/text_color"
+                            />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/layout1"
+                    android:textColor="@color/text_color"
+                    android:textSize="24sp"
+                    android:layout_margin="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Stranger Things (Netflix Series) : Part 2"
+                    />
+
+                <TextView
+                    android:id="@+id/tvGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adventure, Drama, Fantasy"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    android:textColor="@color/unselected"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 hr 55 mins"
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvGenre"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/text_color"
+                    android:background="@drawable/ic_corners"
+                    />
+
+                <TextView
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2015"
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvGenre"
+                    app:layout_constraintStart_toEndOf="@id/tvDuration"
+                    android:textColor="@color/text_color"
+                    android:background="@drawable/ic_corners"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDuration">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnWatch"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:backgroundTint="@color/base"
+                        android:text="Watch"
+                        app:cornerRadius="10dp" />
+
+                    <ImageView
+                        android:id="@+id/btnSave"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_corners"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_add"
+                        app:cornerRadius="10dp"
+                        app:tint="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/btnShare"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_background"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_share"
+                        app:cornerRadius="10dp"
+                        app:tint="@color/white" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPlot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plot Summary"
+                    app:layout_constraintTop_toBottomOf="@id/layout2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/text_color"
+                    android:layout_margin="15dp"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvSummary"
+                    android:layout_width="match_parent"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Summary"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlot"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/unselected"
+                    android:layout_margin="15dp"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cast"
+                    app:layout_constraintTop_toBottomOf="@id/tvSummary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/text_color"
+                    android:layout_margin="15dp"
+                    android:textSize="18sp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvCast"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

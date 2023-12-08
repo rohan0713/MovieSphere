@@ -26,14 +26,101 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvRecent"
-                    tools:listitem="@layout/movies_item"
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tvAllPopular"
+                    android:backgroundTint="@color/border"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="25dp"
+                    app:cardCornerRadius="20dp"
+                    >
+
+                    <ImageView
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvPopular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintTop_toBottomOf="@id/rvRecent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_margin="20dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tvAllPopular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All movies"
+                    android:textColor="@color/unselected"
+                    app:layout_constraintTop_toBottomOf="@id/rvRecent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="20dp"
+                    android:textSize="13sp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPopular"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvContinue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue Watching"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintTop_toBottomOf="@id/rvPopular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All movies"
+                    android:textColor="@color/unselected"
+                    app:layout_constraintTop_toBottomOf="@id/rvPopular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="20dp"
+                    android:textSize="13sp"
+                    />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvContinue"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
